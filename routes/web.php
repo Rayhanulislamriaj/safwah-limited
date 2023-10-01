@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FooterController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\TeamController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,12 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('admin/team/edit/{id}', [TeamController::class, 'admin_team_edit'])->name('admin.team.edit');
     Route::post('admin/team/update/{id}', [TeamController::class, 'admin_team_update'])->name('admin.team.update');
     Route::get('admin/team/delete/{id}', [TeamController::class, 'admin_team_delete'])->name('admin.team.delete');
+
+
+    // Route::get('admin/brand', [BrandController::class, 'admin_brand'])->name('admin.brand');
+    Route::resource('brand', BrandController::class);
+    // Route::post('brand/update/{id}', [BrandController::class, 'update'])->name('update');
+    // Route::post('delete/{id}', [BrandController::class, 'delete'])->name('delete');
 
 });
 

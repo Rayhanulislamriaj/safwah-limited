@@ -32,7 +32,7 @@ class TeamController extends Controller
         }
         $insertRecord->save();
 
-        return redirect()->back()->with('success', 'Team Members successfully Added!');
+        return redirect()->back()->with('success', 'Brand successfully Added!');
     }
 
     public function admin_team_edit($id, Request $request)
@@ -61,7 +61,7 @@ class TeamController extends Controller
         }
         $updateRecord->save();
 
-        return back()->with('success', 'Team Members successfully Updated!');
+        return back()->with('success', 'Brand successfully Updated!');
     }
     public function admin_team_delete($id, Request $request)
     {
@@ -73,6 +73,6 @@ class TeamController extends Controller
 
         $deleteRecord->delete();
 
-        return redirect()->back()->with('error', 'Members successfully Deleted!');
+        return redirect()->back()->with('error', 'Brand successfully Deleted!');
     }
 }

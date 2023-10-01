@@ -510,4 +510,43 @@
         </section> --}}
 
         <!-- end client section -->
+
+        <section class="client_section  layout_padding">
+            {{-- <div class="container-fluid text-center"> --}}
+            <div class="heading_container heading_center">
+                <h2>Brands</h2>
+                {{-- <h4>What we offer</h4> --}}
+                <br>
+                <div class="row">
+                    @foreach (App\Models\Team::all() as $brand)
+                        <div class="col-sm-3 text-align-center">
+                            <span class="glyphicon glyphicon-off"></span>
+                            <img class="mt-3" width="150" height="150"
+                                src="{{ asset('public/team') }}/{{ $brand->photo }}" alt="">
+                            <p>{{ $brand->name }}</p>
+                        </div>
+                    @endforeach
+
+
+                </div>
+                <br><br>
+                {{-- <div class="row">
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        <h4>GREEN</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-certificate"></span>
+                        <h4>CERTIFIED</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        <h4>HARD WORK</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                </div> --}}
+            </div>
+        </section>
     @endsection

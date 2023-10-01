@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3>
-                            <b>Edit Team Member Page</b>
+                            <b>Edit Brand Page</b>
                         </h3>
                     </div>
                     <form class="form-horizontal" action="{{ route('admin.team.update', $getrecord->id) }}" method="POST"
@@ -15,7 +15,7 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Members Name </label>
+                                <label class="col-sm-2 col-form-label" for="">Brand Name </label>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="text" name="name" placeholder="Enter Name"
                                         value="{{ @$getrecord->name }}">
@@ -23,7 +23,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Members Designation </label>
+                                <label class="col-sm-2 col-form-label" for="">Brand Item Number </label>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="text" name="designation"
                                         placeholder="Enter Designation" value="{{ @$getrecord->designation }}">
@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Members Description </label>
+                                <label class="col-sm-2 col-form-label" for="">Brand Description </label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" name="description" id="" cols="21" rows="7"
                                         placeholder="Enter Description">{{ @$getrecord->description }}</textarea>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="card-footer">
                             <label class="col-sm-2 col-form-label" for=""> </label>
-                            <button type="submit" class="btn btn-success">Edit Team Members</button>
+                            <button type="submit" class="btn btn-success">Edit Brand</button>
 
                             <a href="{{ route('admin.dashboard') }}" class="btn btn-dark float-right">Cancel</a>
                         </div>
